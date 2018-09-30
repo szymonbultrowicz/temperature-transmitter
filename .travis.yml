@@ -10,6 +10,7 @@ before_install:
 install:
   - arduino --install-library "OneWire"
   - arduino --install-library "DallasTemperature"
+  - arduino --install-library "Adafruit Unified Sensor Library"
   - arduino --install-library "DHT sensor library"
 script:
   - arduino --verify --board arduino:avr:uno main.ino
