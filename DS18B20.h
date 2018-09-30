@@ -1,5 +1,5 @@
-#ifndef _Config_H_
-#define _Config_H_
+#ifndef _DS12B20_H_
+#define _DS12B20_H_
 
 #include <OneWire.h>
 #include <DallasTemperature.h>
