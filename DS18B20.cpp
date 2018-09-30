@@ -1,8 +1,8 @@
 #include "DS18B20.h"
 
 DS18B20::DS18B20(unsigned int pin) {
-    OneWire oneWire(pin);
-    this->sensors = new DallasTemperature(&oneWire);
+    this->oneWire = new OneWire(pin);
+    this->sensors = new DallasTemperature(this->oneWire);
 }
 
 void DS18B20::init() {

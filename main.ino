@@ -13,5 +13,8 @@ void setup() {
 void loop() {
     delay(2000);
 
-    thermometer.readTemperature();
+    float temp = thermometer.readTemperature();
+
+    Serial.print("T: ");
+    Serial.println(temp);
 }

@@ -13,6 +13,7 @@ class DS18B20
     float readTemperature();
 
   private:
+    OneWire* oneWire;
     DallasTemperature* sensors;
 };
 
