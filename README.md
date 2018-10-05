@@ -8,3 +8,4 @@
 1. [DallasTemperature](https://github.com/milesburton/Arduino-Temperature-Control-Library)
 1. [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
 1. [DHT Sensor Library](https://github.com/adafruit/DHT-sensor-library)
+1. [rc-switch](https://github.com/sui77/rc-switch)
