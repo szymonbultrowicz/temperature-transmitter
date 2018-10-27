@@ -13,6 +13,7 @@ install:
   - arduino --install-library "Adafruit Unified Sensor"
   - arduino --install-library "DHT sensor library"
   - arduino --install-library "rc-switch"
+  - arduino --install-library "Battery Sense"
 script:
   - arduino --verify --board arduino:avr:uno main.ino
   
