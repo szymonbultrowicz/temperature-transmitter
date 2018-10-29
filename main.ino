@@ -42,6 +42,6 @@ void loop()
     Serial.println(battery.getLevel());
 }
 
-unsigned short normalizeValue(float value) {
-    return (unsigned short)round(value * 100.0);
+uint16_t normalizeValue(float value) {
+    return (uint16_t)round(value * 100.0);
 }

@@ -14,6 +14,8 @@ install:
   - arduino --install-library "DHT sensor library"
   - arduino --install-library "rc-switch"
   - arduino --install-library "Battery Sense"
+  - wget https://github.com/FrankBoesing/FastCRC/archive/master.zip
+  - arduino --install-library FastCRC-master.zip
 script:
   - arduino --verify --board arduino:avr:uno main.ino
   
