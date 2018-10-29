@@ -1,5 +1,5 @@
 #include <RCSwitch.h>
-#include <FastCRC.h>
+#include "FastCRC.h"
 
 class Transmitter
 {
