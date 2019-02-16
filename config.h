@@ -4,8 +4,9 @@
 
 #define TX_PIN 13
 #define DS18B20_PIN 10
-#define DHT11_PIN 9
+#define DHT11_PIN 12
 #define BATTERY_SENSE_PIN A0
+#define BATTERY_ACTIVATION_PIN 9
 
 #define DUMMY_MIN_V 900
 #define DUMMY_MAX_V 1500

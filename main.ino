@@ -7,7 +7,7 @@
 DS18B20 thermometer(DS18B20_PIN);
 DHT11Device humiditySensor(DHT11_PIN);
 Transmitter transmitter(TX_PIN, TX_PROTOCOL);
-BatterySense battery(DUMMY_MIN_V, DUMMY_MAX_V, REF_V, VOLTAGE_DIVIDER, BATTERY_SENSE_PIN);
+BatterySense battery(DUMMY_MIN_V, DUMMY_MAX_V, REF_V, VOLTAGE_DIVIDER, BATTERY_SENSE_PIN, BATTERY_ACTIVATION_PIN);
 
 void setup()
 {

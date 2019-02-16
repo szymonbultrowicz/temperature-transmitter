@@ -8,7 +8,8 @@ class BatterySense
         uint16_t maxV,
         uint16_t refV,
         float ratio,
-        uint8_t pin);
+        uint8_t pin,
+        uint8_t activationPin);
     void init();
     uint16_t getVoltage();
     uint8_t getLevel();
