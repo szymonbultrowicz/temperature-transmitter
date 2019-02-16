@@ -21,7 +21,7 @@ void setup()
 
 void loop()
 {
-    delay(2000);
+    delay(LOOP_DELAY);
 
     float temp = thermometer.readTemperature();
 
