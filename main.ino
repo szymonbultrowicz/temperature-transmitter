@@ -1,3 +1,5 @@
+#include <LowPower.h>
+
 #include <math.h>
 #include "config.h"
 #include "DS18B20.h"
@@ -21,7 +23,7 @@ void setup()
 
 void loop()
 {
-    delay(LOOP_DELAY);
+    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
 
     float temp = thermometer.readTemperature();
 
