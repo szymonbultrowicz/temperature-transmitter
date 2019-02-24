@@ -37,11 +37,11 @@ void loop()
     uint16_t voltage = battery.getVoltage();
     Serial.print("V: ");
     Serial.println(voltage);
-    transmitter.send('V', voltage);
+    transmitter.send('V', (int16_t)voltage);
     Serial.print("L: ");
     Serial.println(battery.getLevel());
 }
 
-uint16_t normalizeValue(float value) {
-    return (uint16_t)round(value * 100.0);
+int16_t normalizeValue(float value) {
+    return (int16_t)round(value * 100.0);
 }

@@ -18,7 +18,7 @@ uint32_t buff2int(uint8_t buff[]) {
     return result;
 }
 
-void Transmitter::send(uint8_t type, uint16_t value) {
+void Transmitter::send(uint8_t type, int16_t value) {
     uint8_t buff[BUFF_SIZE];
     buff[0] = type;
     buff[1] = (uint8_t)(value >> BYTE_SIZE);

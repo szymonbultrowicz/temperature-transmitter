@@ -5,7 +5,7 @@ class Transmitter
 {
 public:
   Transmitter(unsigned int pin, unsigned int protocol);
-  void send(uint8_t type, uint16_t value);
+  void send(uint8_t type, int16_t value);
 
 private:
   RCSwitch* device;
