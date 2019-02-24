@@ -8,7 +8,7 @@
 
 DS18B20 thermometer(DS18B20_PIN);
 DHT11Device humiditySensor(DHT11_PIN);
-Transmitter transmitter(TX_PIN, TX_PROTOCOL);
+Transmitter transmitter(TX_PIN, TX_ENABLE_PIN, TX_PROTOCOL);
 BatterySense battery(DUMMY_MIN_V, DUMMY_MAX_V, REF_V, VOLTAGE_DIVIDER, BATTERY_SENSE_PIN, BATTERY_ACTIVATION_PIN);
 
 void setup()
@@ -23,10 +23,9 @@ void setup()
 
 void loop()
 {
-    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
+    transmitter.wakeUp();
 
     float temp = thermometer.readTemperature();
-
     Serial.print("T: ");
     Serial.println(temp);
     transmitter.send('T', normalizeValue(temp));
@@ -42,6 +41,11 @@ void loop()
     transmitter.send('V', (int16_t)voltage);
     Serial.print("L: ");
     Serial.println(battery.getLevel());
+
+    // Needed for the print to finish
+    delay(10);
+    transmitter.sleep();
+    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
 }
 
 int16_t normalizeValue(float value) {
