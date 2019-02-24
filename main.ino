@@ -18,11 +18,15 @@ void setup()
     thermometer.init();
     humiditySensor.init();
     battery.init();
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, LOW);
+
     Serial.println("Started");
 }
 
 void loop()
 {
+    blink();
     transmitter.wakeUp();
 
     float temp = thermometer.readTemperature();
@@ -42,10 +46,16 @@ void loop()
     Serial.print("L: ");
     Serial.println(battery.getLevel());
 
+    transmitter.sleep();
     // Needed for the print to finish
     delay(10);
-    transmitter.sleep();
     LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
+}
+
+void blink() {
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(100);
+    digitalWrite(LED_BUILTIN, LOW);
 }
 
 int16_t normalizeValue(float value) {

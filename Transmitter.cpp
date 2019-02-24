@@ -35,10 +35,8 @@ void Transmitter::send(uint8_t type, int16_t value) {
 
 void Transmitter::wakeUp() {
     digitalWrite(this->enabledPin, HIGH);
-    delay(10);
 }
 
 void Transmitter::sleep() {
     digitalWrite(this->enabledPin, HIGH);
-    delay(10);
 }

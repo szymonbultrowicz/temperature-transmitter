@@ -2,7 +2,7 @@
 
 #define BAUD_RATE 9600
 
-#define TX_PIN 13
+#define TX_PIN 11
 #define TX_ENABLE_PIN 8
 #define DS18B20_PIN 10
 #define DHT11_PIN 12
