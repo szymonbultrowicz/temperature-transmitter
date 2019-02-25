@@ -4,10 +4,13 @@
 class Transmitter
 {
 public:
-  Transmitter(unsigned int pin, unsigned int protocol);
+  Transmitter(uint8_t pin, uint8_t enabledPin, uint8_t protocol);
   void send(uint8_t type, int16_t value);
+  void wakeUp();
+  void sleep();
 
 private:
   RCSwitch* device;
   FastCRC8* CRC8;
+  uint8_t enabledPin;
 };

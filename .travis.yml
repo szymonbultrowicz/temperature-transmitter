@@ -14,6 +14,7 @@ install:
   - arduino --install-library "DHT sensor library"
   - arduino --install-library "rc-switch"
   - arduino --install-library "Battery Sense"
+  - arduino --install-library "Low-Power"
 script:
   - arduino --verify --board arduino:avr:uno main.ino
   

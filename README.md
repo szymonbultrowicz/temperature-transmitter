@@ -11,3 +11,4 @@
 1. [rc-switch](https://github.com/sui77/rc-switch)
 1. [Battery Sense](https://github.com/rlogiacco/BatterySense)
 1. [FastCRC](https://github.com/FrankBoesing/FastCRC) (included, see: [CRC.h](CRC.h))
+1. [Low-Power](https://github.com/rocketscream/Low-Power)

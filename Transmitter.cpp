@@ -3,11 +3,14 @@
 #define BYTE_SIZE 8
 #define BUFF_SIZE 4
 
-Transmitter::Transmitter(unsigned int pin, unsigned int protocol) {
+Transmitter::Transmitter(uint8_t pin, uint8_t enabledPin, uint8_t protocol) {
     this->device = new RCSwitch();
     this->device->enableTransmit(pin);
     this->device->setProtocol(protocol);
     this->CRC8 = new FastCRC8();
+    this->enabledPin = enabledPin;
+    pinMode(enabledPin, OUTPUT);
+    digitalWrite(enabledPin, LOW);
 }
 
 uint32_t buff2int(uint8_t buff[]) {
@@ -28,4 +31,12 @@ void Transmitter::send(uint8_t type, int16_t value) {
     uint32_t code = buff2int(buff);
     Serial.println(code, HEX);
     this->device->send(code, BUFF_SIZE * BYTE_SIZE);
+}
+
+void Transmitter::wakeUp() {
+    digitalWrite(this->enabledPin, HIGH);
+}
+
+void Transmitter::sleep() {
+    digitalWrite(this->enabledPin, HIGH);
 }
