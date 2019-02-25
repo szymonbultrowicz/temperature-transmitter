@@ -49,7 +49,7 @@ void loop()
     transmitter.sleep();
     // Needed for the print to finish
     delay(10);
-    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
+    LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF); 
 }
 
 void blink() {
