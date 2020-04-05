@@ -4,7 +4,7 @@
 
 #define TX_PIN 8
 #define TX_ENABLE_PIN 7
-#define DS18B20_PIN 13
+#define DS18B20_PIN 12
 #define DHT11_PIN 11
 #define BATTERY_SENSE_PIN A0
 #define BATTERY_ACTIVATION_PIN 9
